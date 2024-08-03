@@ -1,0 +1,22 @@
+version: "3"
+services:
+  reverse-proxy:
+    container_name: nginx_reverse_proxy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: merge-nginx-reverse-proxy:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      VARIABLE_NOT_DEFINED: ${VARIABLE_NOT_DEFINED}
+    ports: 
+      - "80:80"
+    networks:
+      - cms-merge-network
+  
+networks:
+  cms-merge-network: 
+    name: cms-merge-network
+    driver: bridge
