@@ -1,0 +1,15 @@
+* {
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+.head {
+    background-color: #242424;
+}
+.foot  {
+    background-color: #000000;
+}
