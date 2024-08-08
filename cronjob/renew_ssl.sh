@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# IMPORTANT Right now the certificate is being updated by a crontab create at root user (sudo su)
 # Define the path to the Docker Compose file
 USER_ROUTE="${HOME}"
 PROJECT_FOLDER="${USER_ROUTE}/personal/docker-nginx-reverse-proxy"
