@@ -1,0 +1,9 @@
+# Usa la imagen oficial de Certbot como base
+FROM certbot/certbot AS build
+
+# Instala los requisitos para el plugin DNS de Cloudflare
+RUN apk add --no-cache python3 py3-pip && \
+    pip install certbot-dns-cloudflare
+
+# Establece el directorio de trabajo
+WORKDIR /etc/letsencrypt
