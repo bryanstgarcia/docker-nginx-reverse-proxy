@@ -42,6 +42,7 @@ docker build -f ./Dockerfile.cerbot . -t bryanstgarcia/cerbot-cloudflare:<versio
 ```shell
 docker tag bryanstgarcia/<repo-name>:<version> bryanstgarcia/<repo-name>:latest
 ```
+You can also use the image id to tag. Sometimes is easier.
 This ensures that the latest tag always reflects the most recent version.
 
 ### 🔐 Step 3: Log in to Docker Hub (if not already logged in)
